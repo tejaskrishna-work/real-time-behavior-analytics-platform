@@ -63,33 +63,6 @@ Dashboard UI (Charts & Insights)
 
 ---
 
-## 📂 Project Structure
-
-
-.
-├── backend/
-│ ├── src/
-│ │ ├── controllers/
-│ │ ├── services/
-│ │ ├── models/
-│ │ ├── routes/
-│ │ ├── workers/
-│ │ ├── queues/
-│ │ ├── middlewares/
-│ │ └── utils/
-│ ├── public/
-│ └── package.json
-│
-├── ecommerce-demo/
-│ ├── public/
-│ ├── src/
-│ └── package.json
-│
-├── README.md
-└── .gitignore
-
-
----
 
 ## 🧠 Tech Stack
 
