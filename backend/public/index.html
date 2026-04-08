@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>Behavior Analytics Dashboard</h1>
+      <p>Overview, trends, WAU, MAU, segmentation, funnel and retention.</p>
+    </header>
+
+    <section class="controls">
+      <input id="tokenInput" placeholder="Paste Bearer token" />
+      <input id="projectIdInput" value="69d36d49422293a313fb168a" placeholder="Project ID" />
+      <button id="loadBtn">Load Dashboard</button>
+    </section>
+
+    <section class="cards" id="overviewCards"></section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Event Timeseries</h3>
+        <canvas id="timeseriesChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Top Events</h3>
+        <canvas id="topEventsChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>DAU</h3>
+        <canvas id="dauChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>WAU</h3>
+        <canvas id="wauChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>MAU</h3>
+        <canvas id="mauChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Segmentation by Event</h3>
+        <canvas id="segmentChart"></canvas>
+      </div>
+    </section>
+
+    <section class="grid single">
+      <div class="card">
+        <h3>Funnel</h3>
+        <div id="funnelTable"></div>
+      </div>
+
+      <div class="card">
+        <h3>Retention</h3>
+        <div id="retentionTable"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>

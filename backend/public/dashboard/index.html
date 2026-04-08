@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behavior Analytics Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <div class="pill">Analytics Dashboard</div>
+        <h1>Behavior Analytics Platform</h1>
+        <p>
+          Visualize overview metrics, trends, funnels, cohorts, WAU, MAU, segmentation,
+          and preaggregated daily analytics.
+        </p>
+      </div>
+    </header>
+
+    <section class="controls card">
+      <div class="control-group">
+        <label for="tokenInput">Bearer Token</label>
+        <input id="tokenInput" placeholder="Paste access token here" />
+      </div>
+
+      <div class="control-group">
+        <label for="projectIdInput">Project ID</label>
+        <input id="projectIdInput" value="69d36d49422293a313fb168a" />
+      </div>
+
+      <div class="control-actions">
+        <button id="loadBtn" type="button">Load Dashboard</button>
+      </div>
+    </section>
+
+    <section id="overviewCards" class="metric-grid"></section>
+
+    <section class="chart-grid">
+      <div class="card chart-card">
+        <h3>Event Timeseries</h3>
+        <div class="chart-wrap"><canvas id="timeseriesChart"></canvas></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>Top Events</h3>
+        <div class="chart-wrap"><canvas id="topEventsChart"></canvas></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>DAU</h3>
+        <div class="chart-wrap"><canvas id="dauChart"></canvas></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>WAU</h3>
+        <div class="chart-wrap"><canvas id="wauChart"></canvas></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>MAU</h3>
+        <div class="chart-wrap"><canvas id="mauChart"></canvas></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>Segmentation by Event</h3>
+        <div class="chart-wrap"><canvas id="segmentationChart"></canvas></div>
+      </div>
+    </section>
+
+    <section class="table-grid">
+      <div class="card">
+        <h3>Funnel</h3>
+        <div id="funnelTable"></div>
+      </div>
+
+      <div class="card">
+        <h3>Retention</h3>
+        <div id="retentionTable"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Preaggregated Daily Summary</h3>
+      <div id="preaggregatedTable"></div>
+    </section>
+  </div>
+
+  <script src="/dashboard/chart.umd.js"></script>
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>

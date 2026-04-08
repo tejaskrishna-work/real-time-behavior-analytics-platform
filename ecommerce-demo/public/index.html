@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DemoStore Analytics Client</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-badge">DS</div>
+      <div>
+        <div class="brand">DemoStore</div>
+        <div class="brand-subtitle">Behavior Analytics Producer Client</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search products..." />
+        <button id="searchBtn">Search</button>
+      </div>
+      <button id="cartBtn" class="cart-btn">Cart <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="pill">Tracking enabled</div>
+        <h1>Modern ecommerce demo with event analytics</h1>
+        <p>
+          This app generates real user behavior events such as product views, search,
+          add to cart, checkout, and purchase completion.
+        </p>
+        <div class="hero-actions">
+          <button id="heroBrowseBtn">Browse Products</button>
+          <button id="heroCartBtn" class="secondary-btn">Open Cart</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stats-card">
+          <div class="stats-title">Tracked Event Types</div>
+          <div class="stats-grid">
+            <div>view_home</div>
+            <div>search</div>
+            <div>view_product</div>
+            <div>add_to_cart</div>
+            <div>view_cart</div>
+            <div>purchase_completed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="statusBar" class="status-bar">
+      <span>Loading products...</span>
+    </section>
+
+    <section id="productListSection">
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <div class="section-subtitle">Click around to generate analytics events</div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="productDetailSection" class="hidden">
+      <button id="backBtn" class="secondary-btn">← Back to products</button>
+      <div id="productDetail" class="product-detail"></div>
+    </section>
+
+    <section id="cartSection" class="hidden">
+      <div class="section-header">
+        <h2>Your Cart</h2>
+        <div class="section-subtitle">Cart actions are tracked too</div>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div id="cartTotal">Total: ₹0</div>
+        <button id="checkoutBtn">Start Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/analytics.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
